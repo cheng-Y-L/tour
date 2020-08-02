@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>目的地</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="r-navbar">
+    <ul>
+      <li>1月</li>
+      <li>2月</li>
+      <li>3月</li>
+      <li>4月</li>
+      <li>5月</li>
+      <li>6月</li>
+      <li>7月</li>
+      <li>8月</li>
+      <li>9月</li>
+      <li>10月</li>
+      <li>11月</li>
+      <li>12月</li>
+    </ul>
+  </div>
+  <div class="r-contents">
+    <ul>
+      <li class="active">
+
+        <img src="image/destination-1-1.jpg" >
+        <img src="image/destination-1-2.jpg" >
+        <img src="image/destination-1-3.jpeg" >
+        <img src="image/destination-1-4.jpeg" >
+        <img src="image/destination-1-5.jpeg" >
+
+          <h1>1月</h1>
+
+      </li>
+      <li>
+        <img src="image/destination-2-1.png" >
+        <img src="image/destination-2-2.jpeg" >
+        <img src="image/destination-2-3.jpeg" >
+        <img src="image/destination-2-4.jpeg" >
+        <img src="image/destination-2-5.jpeg" >
+        <h1>2月</h1>
+      </li>
+      <li>
+        <img src="image/destination-3-1.jpeg" >
+        <img src="image/destination-3-2.jpeg" >
+        <img src="image/destination-3-3.jpeg" >
+        <img src="image/destination-3-4.jpeg" >
+        <img src="image/destination-3-5.jpeg" >
+        <h1>3月</h1>
+      </li>
+      <li>
+        <h1>4月</h1>
+      </li>
+      <li>
+        <h1>5月</h1>
+      </li>
+      <li>
+        <h1>6月</h1>
+      </li>
+      <li>
+        <h1>7月</h1>
+      </li>
+      <li>
+        <h1>8月</h1>
+      </li>
+      <li>
+        <h1>9月</h1>
+      </li>
+      <li>
+        <h1>10月</h1>
+      </li>
+      <li>
+        <h1>11月</h1>
+      </li>
+      <li>
+        <h1>12月</h1>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  var a = document.querySelectorAll('.r-navbar li')
+  var b = document.querySelectorAll('.r-contents li')
+
+  //  for (var i = 0; i < a.length; i++) {
+  //    (function (x) {
+  //      var listener = function () {
+  //        console.log(x)
+  //        // 1.先隐藏其他已经显示的内容
+  //        for(var j = 0; j < b.length; j++){
+  //        if(x !== j ){
+  //        b[j].style.display="none"
+  //        }
+  //      }
+  //        // 2.显示当前的内容
+  //         b[x].style.display="block"
+  //
+  //      }
+  //      a[x].addEventListener('click', listener)
+  //    })(i)
+  //
+  //  }
+  //  清除全部的class
+  //  显示点击的class
+
+
+  function remove() {
+    for (var i = 0; i < b.length; i++) {
+      b[i].classList.remove('active')
+//    js 删除类
+      console.log(i)
+    }
+
+  }
+
+  for (var i = 0; i < b.length; i++) {
+    let c = i
+
+    a[i].addEventListener('mouseenter', function () {
+  remove()
+  b[c].classList.add('active')
+
+  })
+
+  }
+
+
+</script>
+
+
+<!-- 对于兼容式的使用 对于切换时效果加深-->
+</body>
+</html>
